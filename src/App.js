@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaHandRock, FaHandScissors, FaHandPaper } from "react-icons/fa";
 import Player from "./Player";
 import ActionButton from "./ActionButton";
 import { RandomAction } from "./RandomAction";
