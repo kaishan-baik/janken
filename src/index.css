@@ -1,13 +1,182 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #0d47a1;
+  --primary-dark: #002171;
+  --primary-light: #5472d3;
+  --primary-medium: #1643d7;
+  --primary-winner: #082b61;
+  --primary-winner-highlight: #e41a1a;
+  --primary-text: #ffffff;
+
+  --primary-font: "Open Sans", sans-serif;
+  --score-font: "Black Ops One";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+}
+
+html {
+  background: var(--primary-light);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* width: 100%; */
+  padding: 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  background: var(--primary-dark);
+}
+
+h1 {
+  background: var(--primary-medium);
+  padding: 1rem;
+  font-family: var(--score-font);
+  letter-spacing: 0.2rem;
+  padding: 10px;
+  font-size: 2rem;
+  color: var(--primary-text);
+}
+
+h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: var(--primary-text);
+}
+
+.scoreboard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background: #000; */
+}
+
+.player {
+  margin: 10px;
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-text);
+  color: var(--primary-text);
+  /* font-size: 1.5rem; */
+  border-radius: 1rem;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--primary-light);
+}
+
+.action-score {
+  font-size: 5rem;
+}
+
+.score {
+  background: var(--primary-dark);
+  padding: 1px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-medium);
+  box-shadow: 5px 5px #fff;
+  /* border: 1px solid #000; */
+  padding: 0 1rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  height: 8rem;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  background: var(--primary-dark);
+  color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: all 1s;
+}
+
+.actionBtn {
+  font-size: 3rem;
+}
+
+.btn:hover {
+  background: var(--primary-light);
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px #000;
+  color: var(--primary-dark);
+}
+
+.winner-text {
+  margin-top: 2rem;
+  background: var(--primary-winner);
+  padding: 0.5rem 2rem;
+  animation: bobble 2s linear;
+  animation-iteration-count: infinite;
+  box-shadow: 10px 10px 20px var(--primary-dark);
+  border: 5px solid var(--primary-text);
+  border-radius: 1rem;
+}
+
+.winner-text h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--primary-winner-highlight);
+}
+
+@keyframes bobble {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-50px, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(50px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
